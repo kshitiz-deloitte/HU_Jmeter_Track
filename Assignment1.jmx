@@ -87,6 +87,21 @@
                 <stringProp name="Argument.value">sold</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
+              <elementProp name="base_path_store" elementType="Argument">
+                <stringProp name="Argument.name">base_path_store</stringProp>
+                <stringProp name="Argument.value">/v2/store</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="order_path" elementType="Argument">
+                <stringProp name="Argument.name">order_path</stringProp>
+                <stringProp name="Argument.value">/order</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="inventory_path" elementType="Argument">
+                <stringProp name="Argument.name">inventory_path</stringProp>
+                <stringProp name="Argument.value">/inventory</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
             </collectionProp>
           </Arguments>
           <hashTree/>
@@ -104,7 +119,7 @@
             <stringProp name="HTTPSampler.response_timeout"></stringProp>
           </ConfigTestElement>
           <hashTree/>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Pet Tester" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Pet Tester" enabled="false"/>
           <hashTree>
             <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
               <boolProp name="LoopController.continue_forever">true</boolProp>
@@ -191,7 +206,7 @@
                   <stringProp name="filename"></stringProp>
                 </ResultCollector>
                 <hashTree/>
-                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Pet Id Extractor" enabled="true">
                   <stringProp name="RegexExtractor.useHeaders">false</stringProp>
                   <stringProp name="RegexExtractor.refname">pet_id</stringProp>
                   <stringProp name="RegexExtractor.regex">&quot;id&quot;:([^,]+)</stringProp>
@@ -487,6 +502,263 @@
                 <stringProp name="HTTPSampler.contentEncoding"></stringProp>
                 <stringProp name="HTTPSampler.path">${base_path}/${pet_id}</stringProp>
                 <stringProp name="HTTPSampler.method">DELETE</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>false</xml>
+                      <fieldNames>true</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                      <sentBytes>true</sentBytes>
+                      <url>true</url>
+                      <threadCounts>true</threadCounts>
+                      <idleTime>true</idleTime>
+                      <connectTime>true</connectTime>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Store Controller" enabled="true"/>
+          <hashTree>
+            <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Place Order Pet" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&#xd;
+  &quot;id&quot;: 0,&#xd;
+  &quot;petId&quot;: 0,&#xd;
+  &quot;quantity&quot;: 0,&#xd;
+  &quot;shipDate&quot;: &quot;2022-04-12T11:47:30.125Z&quot;,&#xd;
+  &quot;status&quot;: &quot;placed&quot;,&#xd;
+  &quot;complete&quot;: true&#xd;
+}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${base_path_store}${order_path}</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>false</xml>
+                      <fieldNames>true</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                      <sentBytes>true</sentBytes>
+                      <url>true</url>
+                      <threadCounts>true</threadCounts>
+                      <idleTime>true</idleTime>
+                      <connectTime>true</connectTime>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Order Id Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">order_id</stringProp>
+                  <stringProp name="RegexExtractor.regex">&quot;id&quot;:([^,]+)</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Find Order By ID" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${base_path_store}${order_path}/${order_id}</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>false</xml>
+                      <fieldNames>true</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                      <sentBytes>true</sentBytes>
+                      <url>true</url>
+                      <threadCounts>true</threadCounts>
+                      <idleTime>true</idleTime>
+                      <connectTime>true</connectTime>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete Order" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${base_path_store}${order_path}/${order_id}</stringProp>
+                <stringProp name="HTTPSampler.method">DELETE</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+                  <boolProp name="ResultCollector.error_logging">false</boolProp>
+                  <objProp>
+                    <name>saveConfig</name>
+                    <value class="SampleSaveConfiguration">
+                      <time>true</time>
+                      <latency>true</latency>
+                      <timestamp>true</timestamp>
+                      <success>true</success>
+                      <label>true</label>
+                      <code>true</code>
+                      <message>true</message>
+                      <threadName>true</threadName>
+                      <dataType>true</dataType>
+                      <encoding>false</encoding>
+                      <assertions>true</assertions>
+                      <subresults>true</subresults>
+                      <responseData>false</responseData>
+                      <samplerData>false</samplerData>
+                      <xml>false</xml>
+                      <fieldNames>true</fieldNames>
+                      <responseHeaders>false</responseHeaders>
+                      <requestHeaders>false</requestHeaders>
+                      <responseDataOnError>false</responseDataOnError>
+                      <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+                      <assertionsResultsToSave>0</assertionsResultsToSave>
+                      <bytes>true</bytes>
+                      <sentBytes>true</sentBytes>
+                      <url>true</url>
+                      <threadCounts>true</threadCounts>
+                      <idleTime>true</idleTime>
+                      <connectTime>true</connectTime>
+                    </value>
+                  </objProp>
+                  <stringProp name="filename"></stringProp>
+                </ResultCollector>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Pet Inventories" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${base_path_store}${inventory_path}</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
                 <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
                 <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
                 <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
