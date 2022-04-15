@@ -1,0 +1,103 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1649946089790,9538,Signup into Demoblaze,200,OK,Thread Group 1-3,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,9538,0,9138
+1649946085936,13507,Signup into Demoblaze,200,OK,Thread Group 1-1,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,13507,0,13139
+1649946087827,11746,Signup into Demoblaze,200,OK,Thread Group 1-2,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,11746,0,11246
+1649946101335,490,Login Into demoblaze,200,OK,Thread Group 1-3,text,true,,272,227,3,3,https://api.demoblaze.com/login,490,0,0
+1649946101449,446,Login Into demoblaze,200,OK,Thread Group 1-1,text,true,,272,227,3,3,https://api.demoblaze.com/login,446,0,0
+1649946101584,549,Login Into demoblaze,200,OK,Thread Group 1-2,text,true,,272,227,3,3,https://api.demoblaze.com/login,549,0,0
+1649946101830,508,Add To Cart,200,OK,Thread Group 1-3,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,508,0,0
+1649946101896,442,Add To Cart,400,Bad Request,Thread Group 1-1,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,442,0,0
+1649946102134,409,Add To Cart,200,OK,Thread Group 1-2,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,409,0,0
+1649946102342,405,Add To Cart,200,OK,Thread Group 1-3,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,405,0,0
+1649946102342,405,Add To Cart,400,Bad Request,Thread Group 1-1,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,405,0,0
+1649946102545,407,Add To Cart,200,OK,Thread Group 1-2,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,407,0,0
+1649946102749,408,Add To Cart,200,OK,Thread Group 1-3,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,408,0,0
+1649946102749,409,Add To Cart,400,Bad Request,Thread Group 1-1,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,409,0,0
+1649946102953,398,Add To Cart,200,OK,Thread Group 1-2,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,398,0,0
+1649946103159,408,Get Items in Cart,400,Bad Request,Thread Group 1-1,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,408,0,0
+1649946103158,425,Get Items in Cart,200,OK,Thread Group 1-3,text,true,,326,225,3,3,https://api.demoblaze.com/viewcart,425,0,0
+1649946103352,395,Get Items in Cart,200,OK,Thread Group 1-2,text,true,,326,225,3,3,https://api.demoblaze.com/viewcart,395,0,0
+1649946103568,408,Delete an item,200,OK,Thread Group 1-1,text,true,,267,227,3,3,https://api.demoblaze.com/deleteitem,408,0,0
+1649946103584,408,Delete an item,200,OK,Thread Group 1-3,text,true,,230,227,3,3,https://api.demoblaze.com/deleteitem,407,0,0
+1649946103748,433,Delete an item,200,OK,Thread Group 1-2,text,true,,230,227,3,3,https://api.demoblaze.com/deleteitem,433,0,0
+1649946103977,365,Get Items in Cart,400,Bad Request,Thread Group 1-1,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,365,0,0
+1649946103992,496,Get Items in Cart,200,OK,Thread Group 1-3,text,true,,227,225,3,3,https://api.demoblaze.com/viewcart,496,0,0
+1649946104182,409,Get Items in Cart,200,OK,Thread Group 1-2,text,true,,227,225,3,3,https://api.demoblaze.com/viewcart,408,0,0
+1649946104343,350,Placing Order,400,Bad Request,Thread Group 1-1,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,350,0,0
+1649946104489,408,Placing Order,200,OK,Thread Group 1-3,text,true,,227,225,3,3,https://api.demoblaze.com/viewcart,408,0,0
+1649946104591,409,Placing Order,200,OK,Thread Group 1-2,text,true,,227,225,3,3,https://api.demoblaze.com/viewcart,409,0,0
+1649946104693,409,Delete Cart,200,OK,Thread Group 1-1,text,true,,230,202,3,3,https://api.demoblaze.com/deletecart,409,0,0
+1649946104898,405,Delete Cart,200,OK,Thread Group 1-3,text,true,,230,202,2,2,https://api.demoblaze.com/deletecart,404,0,0
+1649946105000,410,Delete Cart,200,OK,Thread Group 1-2,text,true,,230,202,1,1,https://api.demoblaze.com/deletecart,410,0,0
+1649946135193,10977,Signup into Demoblaze,200,OK,Thread Group 1-2,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,10977,0,10587
+1649946137197,8979,Signup into Demoblaze,200,OK,Thread Group 1-3,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,8979,0,8583
+1649946133203,12986,Signup into Demoblaze,200,OK,Thread Group 1-1,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,12986,0,12577
+1649946148176,419,Login Into demoblaze,200,OK,Thread Group 1-2,text,true,,272,227,3,3,https://api.demoblaze.com/login,419,0,0
+1649946148186,464,Login Into demoblaze,200,OK,Thread Group 1-3,text,true,,272,227,3,3,https://api.demoblaze.com/login,464,0,0
+1649946148201,450,Login Into demoblaze,200,OK,Thread Group 1-1,text,true,,272,227,3,3,https://api.demoblaze.com/login,450,0,0
+1649946148599,344,Add To Cart,400,Bad Request,Thread Group 1-2,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,344,0,0
+1649946148652,461,Add To Cart,200,OK,Thread Group 1-3,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,461,0,0
+1649946148652,481,Add To Cart,200,OK,Thread Group 1-1,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,481,0,0
+1649946148946,363,Add To Cart,400,Bad Request,Thread Group 1-2,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,363,0,0
+1649946149113,365,Add To Cart,200,OK,Thread Group 1-3,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,365,0,0
+1649946149133,395,Add To Cart,200,OK,Thread Group 1-1,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,395,0,0
+1649946149311,373,Add To Cart,400,Bad Request,Thread Group 1-2,text,false,,413,264,3,3,https://api.demoblaze.com/addtocart,373,0,0
+1649946149480,436,Add To Cart,200,OK,Thread Group 1-3,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,436,0,0
+1649946149529,415,Add To Cart,200,OK,Thread Group 1-1,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,415,0,0
+1649946149685,331,Get Items in Cart,400,Bad Request,Thread Group 1-2,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,331,0,0
+1649946149917,419,Get Items in Cart,200,OK,Thread Group 1-3,text,true,,326,225,3,3,https://api.demoblaze.com/viewcart,419,0,0
+1649946150017,344,Delete an item,200,OK,Thread Group 1-2,text,true,,267,227,3,3,https://api.demoblaze.com/deleteitem,343,0,0
+1649946149945,430,Get Items in Cart,200,OK,Thread Group 1-1,text,true,,326,225,3,3,https://api.demoblaze.com/viewcart,430,0,0
+1649946150361,393,Get Items in Cart,400,Bad Request,Thread Group 1-2,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,393,0,0
+1649946150337,438,Delete an item,200,OK,Thread Group 1-3,text,true,,230,227,3,3,https://api.demoblaze.com/deleteitem,438,0,0
+1649946150375,437,Delete an item,200,OK,Thread Group 1-1,text,true,,230,227,3,3,https://api.demoblaze.com/deleteitem,437,0,0
+1649946150755,352,Placing Order,400,Bad Request,Thread Group 1-2,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,352,0,0
+1649946150776,446,Get Items in Cart,200,OK,Thread Group 1-3,text,true,,227,225,3,3,https://api.demoblaze.com/viewcart,446,0,0
+1649946150813,441,Get Items in Cart,200,OK,Thread Group 1-1,text,true,,227,225,3,3,https://api.demoblaze.com/viewcart,441,0,0
+1649946151108,459,Delete Cart,200,OK,Thread Group 1-2,text,true,,230,202,3,3,https://api.demoblaze.com/deletecart,459,0,0
+1649946151223,439,Placing Order,200,OK,Thread Group 1-3,text,true,,227,225,2,2,https://api.demoblaze.com/viewcart,438,0,0
+1649946151255,441,Placing Order,200,OK,Thread Group 1-1,text,true,,227,225,2,2,https://api.demoblaze.com/viewcart,440,0,0
+1649946151696,434,Delete Cart,200,OK,Thread Group 1-1,text,true,,230,202,2,2,https://api.demoblaze.com/deletecart,434,0,0
+1649946151662,636,Delete Cart,200,OK,Thread Group 1-3,text,true,,230,202,1,1,https://api.demoblaze.com/deletecart,635,0,0
+1649946178788,1,Signup into Demoblaze,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: No such host is known (api.demoblaze.com),Thread Group 1-1,text,false,,2524,0,2,2,https://api.demoblaze.com/signup,0,0,1
+1649946180782,1,Signup into Demoblaze,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: api.demoblaze.com,Thread Group 1-2,text,false,,2238,0,3,3,https://api.demoblaze.com/signup,0,0,1
+1649946182787,1,Signup into Demoblaze,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: api.demoblaze.com,Thread Group 1-3,text,false,,2238,0,2,2,https://api.demoblaze.com/signup,0,0,0
+1649946184793,1,Login Into demoblaze,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: api.demoblaze.com,Thread Group 1-3,text,false,Test failed: text expected to contain /Auth_token/,2238,0,1,1,https://api.demoblaze.com/login,0,0,1
+1649946186800,1,Add To Cart,Non HTTP response code: java.net.UnknownHostException,Non HTTP response message: api.demoblaze.com,Thread Group 1-3,text,false,,2238,0,1,1,https://api.demoblaze.com/addtocart,0,0,0
+1649946188811,823,Add To Cart,400,Bad Request,Thread Group 1-3,text,false,,409,2503,1,1,https://api.demoblaze.com/addtocart,823,0,490
+1649946191645,499,Add To Cart,400,Bad Request,Thread Group 1-3,text,false,,413,2503,1,1,https://api.demoblaze.com/addtocart,499,0,0
+1649946192145,368,Get Items in Cart,400,Bad Request,Thread Group 1-3,text,false,,409,2445,1,1,https://api.demoblaze.com/viewcart,368,0,0
+1649946192514,391,Delete an item,200,OK,Thread Group 1-3,text,true,,267,227,1,1,https://api.demoblaze.com/deleteitem,391,0,0
+1649946192905,365,Get Items in Cart,400,Bad Request,Thread Group 1-3,text,false,,409,2445,1,1,https://api.demoblaze.com/viewcart,365,0,0
+1649946193271,377,Placing Order,400,Bad Request,Thread Group 1-3,text,false,,409,2445,1,1,https://api.demoblaze.com/viewcart,376,0,0
+1649946193648,430,Delete Cart,200,OK,Thread Group 1-3,text,true,,230,202,1,1,https://api.demoblaze.com/deletecart,430,0,0
+1649946269093,8832,Signup into Demoblaze,200,OK,Thread Group 1-3,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,8832,0,8469
+1649946267093,10832,Signup into Demoblaze,200,OK,Thread Group 1-2,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,10832,0,10469
+1649946265088,12837,Signup into Demoblaze,200,OK,Thread Group 1-1,text,false,Test failed: text expected not to contain /errorMessage/,281,228,3,3,https://api.demoblaze.com/signup,12837,0,12474
+1649946279945,402,Login Into demoblaze,200,OK,Thread Group 1-1,text,true,,272,227,3,3,https://api.demoblaze.com/login,402,0,0
+1649946279945,569,Login Into demoblaze,200,OK,Thread Group 1-2,text,true,,272,227,3,3,https://api.demoblaze.com/login,569,0,0
+1649946279945,569,Login Into demoblaze,200,OK,Thread Group 1-3,text,true,,272,227,3,3,https://api.demoblaze.com/login,569,0,0
+1649946282352,418,Add To Cart,200,OK,Thread Group 1-1,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,418,0,0
+1649946282524,402,Add To Cart,400,Bad Request,Thread Group 1-2,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,402,0,0
+1649946282524,402,Add To Cart,400,Bad Request,Thread Group 1-3,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,402,0,0
+1649946284773,438,Add To Cart,200,OK,Thread Group 1-1,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,438,0,0
+1649946284930,912,Add To Cart,400,Bad Request,Thread Group 1-2,text,false,,413,264,3,3,https://api.demoblaze.com/addtocart,912,0,0
+1649946284930,912,Add To Cart,400,Bad Request,Thread Group 1-3,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,912,0,0
+1649946287218,467,Add To Cart,200,OK,Thread Group 1-1,text,true,,221,284,3,3,https://api.demoblaze.com/addtocart,467,0,0
+1649946287686,408,Get Items in Cart,200,OK,Thread Group 1-1,text,true,,326,225,3,3,https://api.demoblaze.com/viewcart,408,0,0
+1649946287858,365,Add To Cart,400,Bad Request,Thread Group 1-3,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,365,0,0
+1649946287858,365,Add To Cart,400,Bad Request,Thread Group 1-2,text,false,,409,264,3,3,https://api.demoblaze.com/addtocart,365,0,0
+1649946288095,410,Delete an item,200,OK,Thread Group 1-1,text,true,,230,227,3,3,https://api.demoblaze.com/deleteitem,410,0,0
+1649946288223,384,Get Items in Cart,400,Bad Request,Thread Group 1-2,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,383,0,0
+1649946288223,384,Get Items in Cart,400,Bad Request,Thread Group 1-3,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,384,0,0
+1649946288506,407,Get Items in Cart,200,OK,Thread Group 1-1,text,true,,227,225,3,3,https://api.demoblaze.com/viewcart,407,0,0
+1649946288607,409,Delete an item,200,OK,Thread Group 1-2,text,true,,267,227,3,3,https://api.demoblaze.com/deleteitem,409,0,0
+1649946288607,409,Delete an item,200,OK,Thread Group 1-3,text,true,,267,227,3,3,https://api.demoblaze.com/deleteitem,409,0,0
+1649946288914,409,Placing Order,200,OK,Thread Group 1-1,text,true,,227,225,3,3,https://api.demoblaze.com/viewcart,409,0,0
+1649946289017,408,Get Items in Cart,400,Bad Request,Thread Group 1-2,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,408,0,0
+1649946289017,410,Get Items in Cart,400,Bad Request,Thread Group 1-3,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,410,0,0
+1649946289426,409,Placing Order,400,Bad Request,Thread Group 1-2,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,409,0,0
+1649946289324,511,Delete Cart,200,OK,Thread Group 1-1,text,true,,230,202,3,3,https://api.demoblaze.com/deletecart,511,0,0
+1649946289427,408,Placing Order,400,Bad Request,Thread Group 1-3,text,false,,409,206,3,3,https://api.demoblaze.com/viewcart,408,0,0
+1649946289836,511,Delete Cart,200,OK,Thread Group 1-3,text,true,,230,202,2,2,https://api.demoblaze.com/deletecart,511,0,0
+1649946289836,511,Delete Cart,200,OK,Thread Group 1-2,text,true,,230,202,2,2,https://api.demoblaze.com/deletecart,511,0,0
